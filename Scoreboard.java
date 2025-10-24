@@ -45,6 +45,26 @@ public class Scoreboard {
                 // clean out the output screen
                 System.out.println();
             }
+
+            else if (choice==2){
+
+                // prompt the user for the index which they want to remove the player in
+                System.out.print("Enter the index of the player to delete (0 to " + playerScores.size() + ") : " );
+                int indexToDelete = Integer.parseInt(in.nextLine());
+
+                // for-loop to parse through the arrays and delete the target set of data
+                for (int i = 0; i < playerScores.size(); i++){
+
+                    if (indexToDelete==i){
+                        playerNames.remove(i);
+                        playerScores.remove(i);
+                        i--;
+                    }
+                }
+
+                System.out.print("Player deleted.");
+                System.out.println();
+            }
         }
     }
 }
