@@ -25,6 +25,26 @@ public class Scoreboard {
 
             System.out.println("Enter your choice [1/2/3/4]: ");
             int choice = Integer.parseInt(in.nextLine());
+
+            if (choice==1){
+
+                // prompt the user the player's name and input it
+                System.out.print("Enter player name: ");
+                String playerName = in.nextLine();
+
+                // prompt the user the player's score and input it
+                System.out.print("Enter player score: ");
+                int playerScore = Integer.parseInt(in.nextLine());
+
+                // add the inputted values to the arraylists respectively
+                playerNames.add(playerName);
+                playerScores.add(playerScore);
+
+                System.out.println("Player added.");
+
+                // clean out the output screen
+                System.out.println();
+            }
         }
     }
 }
