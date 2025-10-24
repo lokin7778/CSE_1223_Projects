@@ -23,7 +23,7 @@ public class Scoreboard {
             System.out.println("3. View Players");
             System.out.println("4. Exit");
 
-            System.out.println("Enter your choice [1/2/3/4]: ");
+            System.out.print("Enter your choice [1/2/3/4]: ");
             int choice = Integer.parseInt(in.nextLine());
 
             if (choice==1){
@@ -49,21 +49,46 @@ public class Scoreboard {
             else if (choice==2){
 
                 // prompt the user for the index which they want to remove the player in
-                System.out.print("Enter the index of the player to delete (0 to " + playerScores.size() + ") : " );
+                int arraylistlength = playerScores.size()-1;
+                System.out.print("Enter the index of the player to delete (0 to " + arraylistlength + ") : " );
                 int indexToDelete = Integer.parseInt(in.nextLine());
 
                 // for-loop to parse through the arrays and delete the target set of data
                 for (int i = 0; i < playerScores.size(); i++){
 
+                    // if branch to check if the target index is equal to the index in the arraylist
                     if (indexToDelete==i){
-                        playerNames.remove(i);
-                        playerScores.remove(i);
+                        playerNames.remove(i); // delete the playername
+                        playerScores.remove(i); // delete the player score
                         i--;
                     }
                 }
 
                 System.out.print("Player deleted.");
                 System.out.println();
+
+            }
+
+            else if (choice==3){
+
+                // output formatting
+
+                System.out.println("Player List:");
+                System.out.println("------------------");
+
+                // parse through both the arraylists and print out the results
+
+                for (int i = 0; i < playerNames.size(); i++){
+
+                    // print out the player's name and score in a proper formatting
+                    System.out.println(playerNames.get(i) + " - " + playerScores.get(i));
+                }
+
+                System.out.println();
+            }
+
+            else if (choice==4){
+                flag = false;
             }
         }
     }
