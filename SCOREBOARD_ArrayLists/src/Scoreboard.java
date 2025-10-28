@@ -27,7 +27,7 @@ public class Scoreboard{
             int choice = in.nextInt();
             in.nextLine();
 
-            // choice to add a player
+            // choice to add a player's records
             if (choice==1){
 
                 // prompts the user to enter player name and inputs it
@@ -46,6 +46,7 @@ public class Scoreboard{
                 System.out.println(); // to clean the output
             }
 
+            // choice to delete a player's records
             else if (choice==2){
 
                 // prompts the user to enter the index of the player which they want to delete and input it
@@ -69,7 +70,23 @@ public class Scoreboard{
 
             }
 
+            // choice to view the player list
+            else if (choice==3){
 
+                System.out.println("Player List:");
+                System.out.println("------------------");
+
+                // for-loop to parse through the arraylists and print out the formatted output
+                for (int i = 0; i < playerScores.size(); i++){
+
+                    System.out.println(playerNames.get(i) + " - " + playerScores.get(i));
+
+                }
+
+                System.out.println(); // clear the output
+                flag = false;
+
+            }
         }
 
 
