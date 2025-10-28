@@ -95,19 +95,30 @@ public class Scoreboard{
                 System.out.println("Scoreboard");
                 System.out.println("------------------");
 
-                // declare an int variable maxScore to keep a track of the maximum score in the arraylist
+                // declare int variable maxScore and String variable maxPlayer to keep a track of the maximum
+                // score in the arraylist and the player who scored that particular score.
                 int maxScore = 0;
+                String maxPlayer = "";
 
                 // for-loop to parse through the arraylists and find the maximum score in the arraylist playerScores
                 for (int i = 0; i < playerScores.size(); i++){
 
                     if (playerScores.get(i) > maxScore){
-                        String maxPlayer = playerNames.get(i);
-                        maxScore = 50;
+                        maxPlayer = playerNames.get(i);
+                        maxScore = playerScores.get(i);
                     }
 
+                    // declare an int variable noOfStars to keep a track of how many stars to print for the
+                    // other players
+                    int numOfStars = (playerScores.get(i) * 50) / maxScore;
+
+                    // use the repeat() method to print the stars
+                    String stars = "*".repeat(numOfStars);
+
+                    System.out.printf("%-15s %s%n", playerNames.get(i), stars);
                 }
 
+                flag = false;
             }
 
         }
