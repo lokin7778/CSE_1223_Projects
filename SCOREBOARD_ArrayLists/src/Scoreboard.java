@@ -28,7 +28,23 @@ public class Scoreboard{
             int choice = in.nextInt();
             in.nextLine();
 
+            // choice to add a player
+            if (choice==1){
 
+                // prompts the user to enter player name and inputs it
+                System.out.print("Enter player name: ");
+                String playerName = in.nextLine();
+
+                // prompts the user to enter player score and inputs it
+                System.out.print("Enter player score: ");
+                int playerScore = in.nextInt();
+                in.nextLine();
+
+                // add the inputted values into the respective arraylists
+                playerNames.add(playerName);
+                playerScores.add(playerScore);
+
+            }
 
         }
 
