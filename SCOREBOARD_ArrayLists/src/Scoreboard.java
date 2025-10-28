@@ -15,15 +15,14 @@ public class Scoreboard{
 
         while(flag){
 
-            // prompt the user with the given options
+            // prompts the user with the given options
             System.out.println("Select an option: ");
             System.out.println("1. Add Player");
             System.out.println("2. Delete Player");
             System.out.println("3. View Players");
             System.out.println("4. Exit");
 
-            // prompt the user to enter their choice
-
+            // prompts the user to enter their choice
             System.out.print("Enter your choice [1/2/3/4]: ");
             int choice = in.nextInt();
             in.nextLine();
@@ -43,8 +42,33 @@ public class Scoreboard{
                 // add the inputted values into the respective arraylists
                 playerNames.add(playerName);
                 playerScores.add(playerScore);
+                System.out.println("Player added.");
+                System.out.println(); // to clean the output
+            }
+
+            else if (choice==2){
+
+                // prompts the user to enter the index of the player which they want to delete and input it
+                int listLength = playerNames.size()-1;
+                System.out.print("Enter the index of the player to delete (0 to " + listLength + "): ");
+                int indexToDelete = in.nextInt();
+                in.nextLine();
+
+                // a for-loop to parse through the arraylists and delete the target element
+                for (int i = 0; i < playerNames.size(); i++){
+
+                    if (indexToDelete==i){
+                        playerNames.remove(i);
+                        playerScores.remove(i);
+                        i--; // decrement the counter to avoid the index shifting problem
+                    }
+                }
+
+                System.out.println("Player deleted.");
+                System.out.println(); // clears the output
 
             }
+
 
         }
 
