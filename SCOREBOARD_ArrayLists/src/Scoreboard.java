@@ -115,9 +115,10 @@ public class Scoreboard{
                     // use the repeat() method to print the stars
                     String stars = "*".repeat(numOfStars);
 
-                    System.out.printf("%-15s %s%n", playerNames.get(i), stars);
+                    System.out.printf("%-15s %-10s%n", playerNames.get(i), stars);
                 }
 
+                System.out.println("Goodbye");
                 flag = false;
             }
 
