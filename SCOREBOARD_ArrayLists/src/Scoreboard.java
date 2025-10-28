@@ -102,8 +102,10 @@ public class Scoreboard{
                 for (int i = 0; i < playerScores.size(); i++){
 
                     if (playerScores.get(i) > maxScore){
-                        maxScore = playerScores.get(i);
+                        String maxPlayer = playerNames.get(i);
+                        maxScore = 50;
                     }
+
                 }
 
             }
