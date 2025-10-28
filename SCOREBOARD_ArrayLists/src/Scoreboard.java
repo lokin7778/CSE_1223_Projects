@@ -61,8 +61,8 @@ public class Scoreboard{
                     if (indexToDelete==i){
                         playerNames.remove(i);
                         playerScores.remove(i);
-                        i--; // decrement the counter to avoid the index shifting problem
                     }
+
                 }
 
                 System.out.println("Player deleted.");
@@ -73,6 +73,7 @@ public class Scoreboard{
             // choice to view the player list
             else if (choice==3){
 
+                System.out.println();
                 System.out.println("Player List:");
                 System.out.println("------------------");
 
