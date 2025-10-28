@@ -85,9 +85,29 @@ public class Scoreboard{
                 }
 
                 System.out.println(); // clear the output
-                flag = false;
 
             }
+
+            // choice to quit program and print out the final formatted output
+            else if (choice==4){
+
+                System.out.println(); // cleans the output
+                System.out.println("Scoreboard");
+                System.out.println("------------------");
+
+                // declare an int variable maxScore to keep a track of the maximum score in the arraylist
+                int maxScore = 0;
+
+                // for-loop to parse through the arraylists and find the maximum score in the arraylist playerScores
+                for (int i = 0; i < playerScores.size(); i++){
+
+                    if (playerScores.get(i) > maxScore){
+                        maxScore = playerScores.get(i);
+                    }
+                }
+
+            }
+
         }
 
 
