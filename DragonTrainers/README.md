@@ -1,3 +1,5 @@
+# DRAGON TRAINERS LAB
+ 
  For this lab you will be writing two methods for designing a Dragon Trainers game.
 
 The first method you will need to write is getNumberOfMatches. This method takes one parameter - a Scanner. You can see by how it is used in the main method that we will be passing the Scanner object we create in the main method to this method to use. Remember - your program should only ever create ONE Scanner object connected to the keyboard, and parameter passing is the only way to accomplish this.
@@ -37,3 +39,4 @@ ERROR - Dragon prompt cannot be empty.
 Please select a dragon [Plant/Water/Fire]: P
 DEBUG: user entered P
 You MUST use the skeleton for your code. Your solution must include the implementation and use of all of the methods defined in this skeleton - think about what each method does. You MUST NOT make any changes to the main method - violating any of these requirements will cause a deduction in the points earned. Remember - a goal for this assignment is to practice writing methods that conform to a particular specification! The test cases for this program are written to let you test the individual methods as well as the final output. Test incrementally! Write one method at a time and then test it rather than waiting until you've written the whole program and testing it all at once! Taking an incremental approach will help you keep the whole assignment manageable by tackling it in pieces. Note also that you can complete the methods in any order.
+
